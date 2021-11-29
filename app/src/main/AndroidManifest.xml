@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nuwaapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NuwaApplication">
+        <activity
+            android:name=".ui.ChatBoxActivity"
+            android:label="KEBBI程式"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.weather.WeatherMain"
+            android:label="天氣預報"
+            android:parentActivityName=".ui.ChatBoxActivity"/>
+
+        <activity android:name="com.example.alarmClock.AlarmClockMain"
+            android:label="鬧鐘提醒"
+            android:parentActivityName=".ui.ChatBoxActivity"/>
+
+        <activity android:name="com.example.musicplayer.ListMusicActivity"
+            android:label="音樂播放清單"
+            android:parentActivityName=".ui.ChatBoxActivity"/>
+
+        <activity android:name="com.example.musicplayer.MusicPlayerActivity"
+            android:label="音樂播放器"
+            android:parentActivityName="com.example.musicplayer.ListMusicActivity"/>
+
+        <activity android:name="com.example.vedioview.ListVideoActivity"
+            android:label="影片播放清單"
+            android:parentActivityName=".ui.ChatBoxActivity"/>
+
+        <activity android:name="com.example.vedioview.VideoPlayerActivity"
+            android:label="影片播放器"
+            android:parentActivityName="com.example.vedioview.ListVideoActivity"/>
+
+        <activity
+            android:name="com.example.youtubevideo.YoututbevideoMainActivity"
+            android:label="Youtube播放清單"
+            android:parentActivityName=".ui.ChatBoxActivity" />
+
+        <activity
+            android:name="com.example.youtubevideo.YoutubeActivity"
+            android:label="Youtube播放器"
+            android:parentActivityName="com.example.youtubevideo.YoututbevideoMainActivity" />
+
+        <activity
+            android:name="com.example.youtubevideo.UpdateActivity"
+            android:label="Youtube資訊更改"
+            android:parentActivityName="com.example.youtubevideo.YoututbevideoMainActivity" />
+        <activity
+            android:name="com.example.youtubevideo.AddActivity"
+            android:label="Youtube影片新增"
+            android:parentActivityName="com.example.youtubevideo.YoututbevideoMainActivity" />
+        <activity
+            android:name="com.example.youtubevideo.FavoriteActivity"
+            android:label="Youtube我的最愛清單"
+            android:parentActivityName="com.example.youtubevideo.YoututbevideoMainActivity" />
+
+        <activity
+            android:name="com.example.youtubevideo.FavoriteYoutubeActivity"
+            android:label="Youtube播放器"
+            android:parentActivityName="com.example.youtubevideo.FavoriteActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    android:orientation="horizontal"
+    tools:context="com.example.musicplayer.MusicPlayerActivity">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Someone likes you"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_Artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Adele"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/music_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/seekBar_Time"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#fff"
+                android:progress="40"
+                android:progressTint="#fff"
+                android:thumbTint="#fff" />
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="22sp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tv_Duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="00:00"
+                    android:textSize="22sp"
+                    android:textColor="#fff" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btn_Play"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:background="@drawable/ic_baseline_play_arrow_24"
+                android:backgroundTint="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_volume_down_24" />
+
+                <SeekBar
+                    android:id="@+id/seekBar_Volume"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#fff"
+                    android:progress="40"
+                    android:progressTint="#fff"
+                    android:thumbTint="#fff" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_volume_up_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
